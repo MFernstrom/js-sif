@@ -1,9 +1,11 @@
 {
-  "name": "sif",
+  "name": "@marcusfernstrom/sif",
   "version": "1.0.0",
   "description": "SQL Injection Finder - Scan your JS source code for potential SQL injection vectors",
   "main": "index.js",
-  "bin": "./index.js",
+  "bin": {
+    "sif": "./index.js"
+  },
   "scripts": {
     "test": "mocha"
   },
