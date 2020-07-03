@@ -1,0 +1,26 @@
+{
+  "name": "sif",
+  "version": "1.0.0",
+  "description": "SQL Injection Finder - Scan your JS source code for potential SQL injection vectors",
+  "main": "index.js",
+  "bin": "./index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MFernstrom/js-sql-injection-finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MFernstrom/js-sql-injection-finder/issues"
+  },
+  "homepage": "https://github.com/MFernstrom/js-sql-injection-finder#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "mocha": "^8.0.1",
+    "recursive-readdir-sync": "^1.0.6"
+  }
+}
