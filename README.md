@@ -1,9 +1,11 @@
 # SIF / SQL Injection Finder
 
-Scan your JS source code for potential SQL injection vectors
+Scan your JavaScript code for potential SQL injection vectors
+
+<img src="sif.png" />
 
 ## Install
-npm i @marcusfernstrom/sif
+npm i -g @marcusfernstrom/sif
 
 ## Use
 From commandline/terminal run `sif <directory>` where directory is the root of your project.
@@ -16,7 +18,7 @@ SIF will exit with error code 1 if it found any risky SQL, useful if you want to
 SIF grabs all .js files in the directory (recursively) and scans them for MySQL queries `.query(`, when it finds them it collects the SQL statement and analyzes it for string concatenation as well as string literals.
 
 ## Notes
-SIF does not follow variables. A not uncommon pattern is to use constants for SQL statements, such as
+SIF does not follow variables. A fairly common pattern is to use constants for SQL statements, such as
 
 ```
 connection.query(SQL_GET_ALL_USERS, function (error, results, fields) {
@@ -29,6 +31,6 @@ const SQL_GET_ALL_USERS = `
 `;
 ```
 
-This is planned for a future version.
+Following variables like this is planned for a future version.
 
-This is an early version, please report false positives and false negtives along with the SQL when possible so I can improve the accuracy.
+This is an early version, please report false positives and false negatives along with the SQL when possible so I can improve the accuracy.

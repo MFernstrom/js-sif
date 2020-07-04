@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const version = '1.0.0'
+const version = '1.0.2'
 const path = require('path')
 const {log} = require('./utils')
 const sif = require('./sif')
@@ -8,6 +8,9 @@ const chalk = require('chalk')
 const args = process.argv.slice(2)
 
 if(args.length === 0){
+    log(`SIF/SQL Injection Finder v.${version}`)
+    log('https://www.npmjs.com/package/@marcusfernstrom/sif')
+    log()
     log('usage: sif <directory path>')
     process.exit()
 }
